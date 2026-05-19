@@ -1,0 +1,28 @@
+{
+  "name": "jalrakshak-server",
+  "version": "3.0.0",
+  "description": "JalRakshak v3 — ML-powered water quality monitoring API",
+  "main": "index.js",
+  "scripts": {
+    "start":   "node index.js",
+    "dev":     "nodemon index.js",
+    "train":   "python ml/train.py"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.7.1",
+    "bcryptjs":   "^2.4.3",
+    "cors":       "^2.8.5",
+    "dotenv":     "^16.4.5",
+    "express":    "^4.18.3",
+    "jsonwebtoken":"^9.0.2",
+    "mongoose":   "^8.3.4",
+    "pdfkit":     "^0.15.0",
+    "twilio":     "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

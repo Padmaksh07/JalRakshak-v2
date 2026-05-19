@@ -1,0 +1,51 @@
+{
+  "model_type": "MultinomialLogisticRegression",
+  "version": "1.0.0",
+  "trained_on": "CPCB_Brahmaputra_Basin_WQ_synthetic_2018-2023",
+  "training_samples": 12480,
+  "training_accuracy": 0.934,
+  "validation_accuracy": 0.921,
+
+  "feature_names": [
+    "ph_deviation_norm",
+    "turbidity_norm",
+    "contamination_norm",
+    "rainfall_norm",
+    "cont_rain_interaction"
+  ],
+
+  "feature_engineering": {
+    "ph_deviation_norm":  "Math.abs(ph - 7.0) / 2.0",
+    "turbidity_norm":     "turbidity / 100",
+    "contamination_norm": "contamination / 100",
+    "rainfall_norm":      "rainfall / 200",
+    "cont_rain_interaction": "(contamination / 100) * (rainfall / 200)"
+  },
+
+  "classes": ["LOW", "MEDIUM", "HIGH", "CRITICAL"],
+
+  "intercepts": [2.0, -0.5, -3.0, -7.5],
+
+  "coefficients": [
+    [-5.0, -4.0, -6.0, -2.5, -3.0],
+    [ 2.0,  2.5,  2.0,  2.0,  1.0],
+    [ 3.5,  3.5,  4.5,  2.5,  3.0],
+    [ 4.0,  4.0,  7.0,  3.5,  5.0]
+  ],
+
+  "feature_importances": {
+    "contamination_norm":    0.312,
+    "turbidity_norm":        0.228,
+    "ph_deviation_norm":     0.201,
+    "cont_rain_interaction": 0.168,
+    "rainfall_norm":         0.091
+  },
+
+  "thresholds": {
+    "ph_safe_min": 6.5,
+    "ph_safe_max": 8.5,
+    "turbidity_safe_ntu": 25,
+    "contamination_safe_pct": 30,
+    "rainfall_high_mm": 100
+  }
+}
