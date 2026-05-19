@@ -23,9 +23,7 @@ JalRakshak is an intelligent disaster-management platform designed to monitor an
 * React.js
 * Node.js
 * Express.js
-* MongoDB
 * Arduino UNO
-* Machine Learning (Logistic Regression)
 * Gemini AI
 * Twilio API
 * Open-Meteo API
@@ -40,5 +38,6 @@ JalRakshak aims to reduce waterborne disease outbreaks by providing real-time fl
 * Kirtiman
 * Kaustav
 * Piyush
+* Padmaksh
 
 Built for Assam. Built for every flood-prone district in India.
