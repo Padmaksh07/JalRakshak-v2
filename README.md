@@ -37,7 +37,7 @@ JalRakshak aims to reduce waterborne disease outbreaks by providing real-time fl
 
 * Kirtiman
 * Kaustav
-* Piyush
 * Padmaksh
+* Akashdip Sarma
 
 Built for Assam. Built for every flood-prone district in India.
